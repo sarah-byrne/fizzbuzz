@@ -1,7 +1,10 @@
 require_relative '../lib/fizzbuzz'
 describe 'fizzbuzz' do
-  it 'returns "fizz" when passed 3' do
-    expect(fizzbuzz(3)).to eq 'fizz'
+  it 'returns "fizz" when passed any multiple of 3' do
+    expect(fizzbuzz(3)).to eq "fizz"
+    expect(fizzbuzz(12)).to eq "fizz"
+    expect(fizzbuzz(36)).to eq "fizz"
+    expect(fizzbuzz(90)).to eq "fizz"
   end
   
   it 'returns parameter if parameter is not a multiple of 3 or 5' do
